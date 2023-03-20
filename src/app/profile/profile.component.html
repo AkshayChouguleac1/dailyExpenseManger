@@ -1,0 +1,169 @@
+<section class="vh-100" style="background-color: #9A616D;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="../../assets/img/calculator.jpg"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 ">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <form  [formGroup]="profileForm"
+                (ngSubmit)="signupSubmit()" >
+
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <span class="h1 fw-bold mb-0">Sign up</span>
+                  </div>
+
+
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label class="input-label-text" for="first_name">First Name</label>
+                    <input
+                      formControlName="first_name"
+                      type="text"
+                      class="form-control input-sm"
+                      placeholder="Enter First Name"
+                    />
+                    <small
+                      class="form-text text-danger"
+                      *ngIf="
+                        !profileForm.controls['first_name'].valid &&
+                        profileForm.controls['first_name'].touched
+                      "
+                      >Please Enter Valid input</small
+                    >
+                  </div>
+  
+                  <div class="form-group col-md-6">
+                      <label class="input-label-text" for="last_name">Last Name</label>
+                      <input
+                        formControlName="last_name"
+                        type="text"
+                        class="form-control input-sm"
+                        placeholder="Enter Last Name"
+                      />
+                      <small
+                        class="form-text text-danger"
+                        *ngIf="
+                          !profileForm.controls['last_name'].valid &&
+                          profileForm.controls['last_name'].touched
+                        "
+                        >Please Enter Valid input</small
+                      >
+                  </div>
+    
+    
+                  <div class="form-group col-md-6">
+                      <label class="input-label-text" for="email_id">Email</label>
+                      <input
+                        formControlName="email_id"
+                        type="text"
+                        class="form-control input-sm"
+                        placeholder="Enter email id"
+                      />
+                      <small
+                        class="form-text text-danger"
+                        *ngIf="
+                          !profileForm.controls['email_id'].valid &&
+                          profileForm.controls['email_id'].touched
+                        "
+                        >Please Enter Valid input</small
+                      >
+                  </div>
+    
+    
+                  <div class="form-group col-md-6">
+                      <label class="input-label-text" for="phone_number">Phone Number</label>
+                      <input
+                        formControlName="phone_number"
+                        type="number"
+                        class="form-control input-sm"
+                        placeholder="Enter phone number"
+                      />
+                      <small
+                        class="form-text text-danger"
+                        *ngIf="
+                          !profileForm.controls['phone_number'].valid &&
+                          profileForm.controls['phone_number'].touched
+                        "
+                        >Please Enter Valid input</small
+                      >
+                  </div>
+
+                  
+                  <div style="margin-top: 5%;">
+                    <div class="form-group col-md-6">
+                      <label class="input-label-text" for="password">Password</label>
+                      <input
+                        formControlName="password"
+                        type="text"
+                        class="form-control input-sm"
+                        placeholder="Enter Last Name"
+                      />
+                      <small
+                        class="form-text text-danger"
+                        *ngIf="
+                          !profileForm.controls['password'].valid &&
+                          profileForm.controls['password'].touched
+                        "
+                        >Please Enter Valid input</small
+                      >
+                  </div>
+    
+                  <div class="form-group col-md-6">
+                    <label class="input-label-text" for="confirmpassword">Confirm Password</label>
+                    <input
+                      formControlName="confirmpassword"
+                      type="text"
+                      class="form-control input-sm"
+                      placeholder="Enter Last Name"
+                    />
+                    <small
+                      class="form-text text-danger"
+                      *ngIf="
+                        !profileForm.controls['confirmpassword'].valid &&
+                        profileForm.controls['confirmpassword'].touched
+                      "
+                      >Please Enter Valid input</small
+                    >
+                </div>
+    
+                <small
+                        class="form-text text-danger"
+                        *ngIf="
+                          profileForm.controls['password'].value !=
+                          profileForm.controls['confirmpassword'].value
+                        "
+                        >Passwords did not match</small>
+                  </div>
+                  
+        
+                  <div class="form-outline mb-4">
+                    <div *ngIf="profileForm.invalid" class="m-field-text">
+                      (Please fill the mandatory fields)
+                    </div>
+                  </div>
+
+                </div>
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-dark btn-lg btn-block" type="submit" >Sigh up</button>
+                  </div>
+
+                  
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

@@ -1,0 +1,9 @@
+.ng-valid:not(form)  {
+    border-left: 3px solid #42A948 !important; /* green */
+  }
+  .ng-invalid:not(form,ng-multiselect-dropdown)  {
+    border-left: 3px solid #f1130f !important; /* red */
+  }
+  
+   
+  
