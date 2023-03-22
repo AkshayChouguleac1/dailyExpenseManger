@@ -18,15 +18,16 @@ export class ProfileComponent implements OnInit {
     this.profileForm=new FormGroup({
       'first_name':new FormControl('',Validators.required),
       'last_name':new FormControl('',Validators.required),
-      'email_id':new FormControl('',Validators.required),
+      'email':new FormControl('',Validators.required),
       'phone_number':new FormControl('',Validators.required),
       'password':new FormControl('',Validators.required),
       'confirmpassword':new FormControl('',Validators.required)
     })
   }
   signupSubmit(){
-
+    
     if(this.profileForm.controls['password'].value == this.profileForm.controls['confirmpassword'].value){
+      console.log(this.profileForm.controls['password'].value)
       console.log(this.profileForm.value)
     this.profileService.addProfile(this.profileForm.value)
     .subscribe((res:any)=>{

@@ -14,6 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { OtpRecieverWindowComponent } from './otp-reciever-window/otp-reciever-window.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HelpComponent,
     LoginComponent,
     SignupComponent,
+    ForgetPasswordComponent,
+    OtpRecieverWindowComponent,
   ],
   imports: [
     BrowserModule,

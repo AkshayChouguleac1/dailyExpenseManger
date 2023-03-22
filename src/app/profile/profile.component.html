@@ -58,9 +58,9 @@
     
     
                   <div class="form-group col-md-6">
-                      <label class="input-label-text" for="email_id">Email</label>
+                      <label class="input-label-text" for="email">Email</label>
                       <input
-                        formControlName="email_id"
+                        formControlName="email"
                         type="text"
                         class="form-control input-sm"
                         placeholder="Enter email id"
@@ -68,8 +68,8 @@
                       <small
                         class="form-text text-danger"
                         *ngIf="
-                          !profileForm.controls['email_id'].valid &&
-                          profileForm.controls['email_id'].touched
+                          !profileForm.controls['email'].valid &&
+                          profileForm.controls['email'].touched
                         "
                         >Please Enter Valid input</small
                       >

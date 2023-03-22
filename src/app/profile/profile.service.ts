@@ -12,7 +12,6 @@ export class ProfileService {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': String(localStorage.getItem('token'))
         
       })
     };
