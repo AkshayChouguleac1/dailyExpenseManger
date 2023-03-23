@@ -20,9 +20,8 @@ export class ForgetPasswordComponent implements OnInit {
   }
 
   sendReqToPasswordChange(){
-      this.forgetPasswordService.forgetPassword(this.ForgetPwform.controls['email'].value).subscribe((res)=>{
-        this.router.navigateByUrl("/OTPSender");
-      })
+    console.log('sent')
+    this.router.navigate(['/OTPReciever',this.ForgetPwform.controls['email'].value]);
   }
 
 }

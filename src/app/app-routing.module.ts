@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:"help",component:HelpComponent},
   {path:"login",component:LoginComponent},
   {path:"PasswordReset",component:ForgetPasswordComponent},
-  {path:"OTPSender",component:OtpRecieverWindowComponent}
+  {path:"OTPReciever/:id",component:OtpRecieverWindowComponent}
   
 ];
 

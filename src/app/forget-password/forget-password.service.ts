@@ -21,7 +21,6 @@ export class ForgetPasswordService {
   
 
   public forgetPassword(email:string) {
-    console.log(email+ "Helllllllllllllllllllo")
     return  this.http.post(this.base_url + '/profiles/ChangePassword/'+email,this.getHeaders());
     
   }

@@ -10,13 +10,10 @@ export class DashboardService {
   base_url="http://localhost:8080";
 
 public getHeaders() {
-  const httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': String(localStorage.getItem('token'))
-      
-    })
-  };
+  const httpOptions = { headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Authorization': String(localStorage.getItem('token'))
+  }),observe:'response' as 'response'}
   return httpOptions;
 }
 

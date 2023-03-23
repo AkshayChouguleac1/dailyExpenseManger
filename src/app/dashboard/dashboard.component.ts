@@ -44,7 +44,7 @@ export class DashboardComponent implements OnInit {
     })
    
     
-    this.dashboardService.getAllExpensesFor(this.currentDate).subscribe((res:any[])=>{
+    this.dashboardService.getAllExpensesFor(this.currentDate).subscribe((res:any)=>{
       this.ExpenseList=res;
       this.totalExpense=0;
       for(let i=0;i<this.ExpenseList.length;i++){
@@ -70,7 +70,7 @@ export class DashboardComponent implements OnInit {
 
 
   updateExpense(expense:expense){
-    this.dashboardService.getExpense(expense['expense_id']).subscribe((res:expense)=>{
+    this.dashboardService.getExpense(expense['expense_id']).subscribe((res:any)=>{
       this.editModeOn=true;
       this.expenseform=new FormGroup({
         'expense_id':new FormControl(res['expense_id']),
@@ -93,7 +93,7 @@ export class DashboardComponent implements OnInit {
     let datearr=event.target.value.split("-");
     let convertedDateinDesiredformat=datearr[2]+"-"+datearr[1]+"-"+datearr[0];
     this.changedDate=convertedDateinDesiredformat;
-    this.dashboardService.getAllExpensesFor(this.changedDate).subscribe((res:any[])=>{
+    this.dashboardService.getAllExpensesFor(this.changedDate).subscribe((res:any)=>{
       this.ExpenseList=res;
       for(let i=0;i<this.ExpenseList.length;i++){
         this.totalExpense+= Number(this.ExpenseList[i]['price']);
@@ -104,7 +104,7 @@ export class DashboardComponent implements OnInit {
   deleteExpense(expense:expense){
     console.log(expense['expense_id'])
     this.dashboardService.deleteExpense(expense['expense_id']).subscribe((res)=>{
-      this.dashboardService.getAllExpensesFor(this.changedDate).subscribe((res:any[])=>{
+      this.dashboardService.getAllExpensesFor(this.changedDate).subscribe((res:any)=>{
         this.ExpenseList=res;
         this.totalExpense=0;
         for(let i=0;i<this.ExpenseList.length;i++){
@@ -118,7 +118,7 @@ export class DashboardComponent implements OnInit {
   ModalClosed(){
     
       //////////////////////////////////
-      this.dashboardService.getAllExpensesFor(this.changedDate).subscribe((res:any[])=>{
+      this.dashboardService.getAllExpensesFor(this.changedDate).subscribe((res:any)=>{
         this.ExpenseList=res;
         this.totalExpense=0;
         for(let i=0;i<this.ExpenseList.length;i++){
@@ -143,7 +143,7 @@ export class DashboardComponent implements OnInit {
         }
           
         //////////////////////////////////
-        this.dashboardService.getAllExpensesFor(this.changedDate).subscribe((res:any[])=>{
+        this.dashboardService.getAllExpensesFor(this.changedDate).subscribe((res:any)=>{
           this.ExpenseList=res;
           this.totalExpense=0;
           for(let i=0;i<this.ExpenseList.length;i++){
@@ -164,7 +164,7 @@ export class DashboardComponent implements OnInit {
         }
         
           //////////////////////////////////
-        this.dashboardService.getAllExpensesFor(this.changedDate).subscribe((res:any[])=>{
+        this.dashboardService.getAllExpensesFor(this.changedDate).subscribe((res:any)=>{
           this.ExpenseList=res;
           this.totalExpense=0;
           for(let i=0;i<this.ExpenseList.length;i++){
