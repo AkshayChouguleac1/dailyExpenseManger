@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { MessageComponent } from './message/message.component';
 import { OtpRecieverWindowComponent } from './otp-reciever-window/otp-reciever-window.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { SettingComponent } from './setting/setting.component';
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:"help",component:HelpComponent},
   {path:"login",component:LoginComponent},
   {path:"PasswordReset",component:ForgetPasswordComponent},
-  {path:"OTPReciever/:id",component:OtpRecieverWindowComponent}
+  {path:"OTPReciever/:id",component:OtpRecieverWindowComponent},
+  {path:"ResetPassword/:id/:otp",component:ResetPasswordComponent}
   
 ];
 

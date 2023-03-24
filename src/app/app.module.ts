@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { OtpRecieverWindowComponent } from './otp-reciever-window/otp-reciever-window.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { OtpRecieverWindowComponent } from './otp-reciever-window/otp-reciever-w
     SignupComponent,
     ForgetPasswordComponent,
     OtpRecieverWindowComponent,
+    ResetPasswordComponent,
   ],
   imports: [
     BrowserModule,
